@@ -1,3 +1,4 @@
+ 
 const christmasTree = () => {
   
     // Edit "blocksInTree" to change how many blocks are in the christmas tree
@@ -33,12 +34,12 @@ const christmasTree = () => {
     For loop to create the building blocks for the tree with spacing inside of the tree 
     */
     for (let i = 0; i < heightOfTree; i++) {
-      spacesInsideOfTree.push("  ");
+      spacesInsideOfTree.push("\xa0\xa0");
       spacesToString = spacesInsideOfTree.join("");
       if(i === 0) {
-        treeBuildingBlocks.push("  |   ");
+        treeBuildingBlocks.push("\xa0\xa0|\xa0\xa0\xa0");
       } else if (i % 3 === 0 && (i + 1) !== heightOfTree) {
-        spacesInsideOfTree.pop("   ");
+        spacesInsideOfTree.pop("\xa0\xa0\xa0");
         spacesToString = spacesInsideOfTree.join("");
         treeBuildingBlocks.push(`/_${spacesToString}_\\`);
       } else {
@@ -54,26 +55,26 @@ const christmasTree = () => {
     treeBuildingBlocks.map((treeBuild, index) => {
       let spaces = [];
       for (let i = 0; i < numberOfSpacesOutsideTree - index; i++) {
-        if ((i) % 3 === 0 && i !== 0) {
+        if (i % 3 === 0 && i !== 0) {
           continue;
         } else {
-          spaces.push(" ");
+          spaces.push("\xa0");
         }
       }
       let spacesToString = spaces.join("");
       console.log(spacesToString + treeBuild + spacesToString);
-    })
+    });
     
     /* For loop for creating the bottom of the tree */
     for (let i = 0; i < (heightOfTree * widthOfBaseOfTree); i++) {
       bottomOfTree.push("_");
     }
-    const bottomOfTreeToString = bottomOfTree.join("")
+    const bottomOfTreeToString = bottomOfTree.join("");
     console.log(`|${bottomOfTreeToString}|`);
   
      /* For loop for creating the base of the tree */
-    for (let i = 0; i < (blocksInTree); i++) {
-      spacesForBaseOfTree.push("  ");
+    for (let i = 0; i < blocksInTree; i++) {
+      spacesForBaseOfTree.push("\xa0\xa0");
     }
     const spacesForBaseOfTreeString = spacesForBaseOfTree.join("");
     console.log(`${spacesForBaseOfTreeString}\\______/${spacesForBaseOfTreeString}`);
