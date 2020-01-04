@@ -30,10 +30,10 @@ const christmasTree = () => {
     for (let i = 0; i < heightOfTree; i++) {
       spacesInsideOfTree.push("\xa0\xa0");
       spacesToString = spacesInsideOfTree.join("");
+      let treeBuild = `/${spacesToString}\\`;
       if(i === 0) {
         treeBuildingBlocks.push("\xa0\xa0|\xa0\xa0\xa0");
       } else if ((i + 1) === heightOfTree) {
-        let treeBuild = `/${spacesToString}\\`;
         lengthOfTreeBuild.push(treeBuild);
         treeBuildingBlocks.push(treeBuild);
       } else if (i % heightOfBlocksInTree === 0) {
@@ -41,7 +41,7 @@ const christmasTree = () => {
         spacesToString = spacesInsideOfTree.join("");
         treeBuildingBlocks.push(`/_${spacesToString}_\\`);
       } else {
-        treeBuildingBlocks.push(`/${spacesToString}\\`);
+        treeBuildingBlocks.push(treeBuild);
       }
     }
     
