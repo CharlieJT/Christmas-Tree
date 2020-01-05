@@ -8,9 +8,9 @@ const christmasTree = () => {
     
 
     
-    const blocksInTree = 6; // Change how many blocks there are in the tree
+    const blocksInTree = 6; // <<< Change how many blocks there are in the tree
     
-    const heightOfBlocksInTree = 3; // Change the height of the blocks in the tree
+    const heightOfBlocksInTree = 3; // <<< Change the height of the blocks in the tree
   
   
   
