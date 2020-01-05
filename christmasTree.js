@@ -36,7 +36,7 @@ const christmasTree = () => {
       spacesToString = spacesInsideOfTree.join("");
       let treeBuild = `/${spacesToString}\\`;
       if(i === 0) {
-        
+        continue;
       } else if ((i + 1) === heightOfTree) {
         lengthOfTreeBuild.push(treeBuild);
         treeBuildingBlocks.push(treeBuild);
