@@ -6,11 +6,13 @@ const christmasTree = () => {
       Edit "heightOfBlocksInTree" to change how high each of the blocks are in the christmas tree
     */
     
-
+    // vvvvvvvv
     
-    const blocksInTree = 6; // <<< Change how many blocks there are in the tree
+    const blocksInTree = 6;
     
-    const heightOfBlocksInTree = 3; // <<< Change the height of the blocks in the tree
+    const heightOfBlocksInTree = 3;
+  
+    // ^^^^^^^^
   
   
   
@@ -36,7 +38,7 @@ const christmasTree = () => {
       spacesToString = spacesInsideOfTree.join("");
       let treeBuild = `/${spacesToString}\\`;
       if(i === 0) {
-        
+        continue;
       } else if ((i + 1) === heightOfTree) {
         lengthOfTreeBuild.push(treeBuild);
         treeBuildingBlocks.push(treeBuild);
